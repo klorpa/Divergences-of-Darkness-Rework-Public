@@ -139,6 +139,11 @@ political_decisions = {
 			   NOT = { has_country_flag = serfdom_locked_warlord }
 			   year = 1880
 			}
+			OR = {
+			   NOT = { is_culture_group = central_slavic }
+			   tag = RUT
+			   year = 1880
+			}
             debt_law = serfdom
             has_country_flag = serfdom_not_abolished
         }
@@ -147,7 +152,6 @@ political_decisions = {
 			NOT = { vassal_of = PLC }
 	        NOT = { has_country_flag = VOL_WAR_INEVITABLE }
 	        NOT = { has_country_flag = VOL_WAR }
-			
             OR = {
 		     	government = hms_government
 			    government = democracy
@@ -4000,7 +4004,11 @@ political_decisions = {
 	
 		potential = {
 		    tag = SCA
-		    owns = 364
+			OR = {
+			  owns = 364 
+		      SAM = { owns = 364 }
+		    }
+			is_our_vassal = SAM
 			has_country_flag = potencial_lithuanians
 		}
 			
@@ -4010,10 +4018,11 @@ political_decisions = {
                has_global_flag = balters_are_gone
 			   has_country_flag = local_purge_balters
 			}
-			SAM = { vassal_of = THIS }
+		    is_our_vassal = SAM 
 		}
 			
 		effect = {
+		   clr_country_flag = potencial_lithuanians
 		   add_accepted_culture = lithuanian
 		   SAM = { all_core = { add_core = SCA } }
 		   inherit = SAM				  

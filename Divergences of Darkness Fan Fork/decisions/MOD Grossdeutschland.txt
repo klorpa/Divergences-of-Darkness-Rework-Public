@@ -94,12 +94,16 @@ political_decisions = {
 	potential = { 
 	OR = { tag = GER tag = HLR tag = CAE tag = NGF tag = GCF tag = POM } 
 	NOT = { accepted_culture = prussian }
-	any_owned_province = { OR = { is_core = PRU is_core = KRL is_core = PZN is_core = PML } }
+	any_owned_province = { OR = { is_core = PRU is_core = KRL is_core = LIV } }
 	NOT = { has_country_flag = prussian_acc }
 	}
 	
 	allow = { 
-	NOT = { citizenship_policy = residency }
+	  OR = {
+	     NOT = { citizenship_policy = residency }
+		 ruling_party_ideology = fascist 
+		 tag = GER
+	  }
 	}
 	
 	effect = { 
@@ -112,14 +116,18 @@ political_decisions = {
 	integrate_rhineland = { 
 	picture = MarzBerlin
 	potential = { 
-	   OR = { tag = SGF tag = CAE tag = NGF }
+	   OR = { tag = SGF tag = CAE tag = NGF tag = GER }
 	   NOT = { accepted_culture = rheinish }
 	   any_owned_province = { is_core = CFR }
 	   NOT = { has_country_flag = rheinish_acc }
 	}
 	
 	allow = { 
-	   NOT = { citizenship_policy = residency }
+	  OR = {
+	     NOT = { citizenship_policy = residency }
+		 ruling_party_ideology = fascist 
+		 tag = GER
+	  }
 	}
 	
 	effect = { 
@@ -131,14 +139,18 @@ political_decisions = {
 	integrate_elbe = { 
 	picture = MarzBerlin
 	potential = { 
-	OR = { tag = SGF tag = CFR tag = PRU }
+	OR = { tag = SGF tag = CFR tag = PRU tag = GER }
 	NOT = { accepted_culture = north_german }
 	OR = { any_owned_province = { is_core = BRN } any_owned_province = { is_core = POM } any_owned_province = { is_core = HAN } }
 	NOT = { has_country_flag = elbe_acc }
 	}
 	
 	allow = { 
-	   NOT = { citizenship_policy = residency }
+	  OR = {
+	     NOT = { citizenship_policy = residency }
+		 ruling_party_ideology = fascist 
+		 tag = GER
+	  }
 	}
 	
 	effect = { 
@@ -151,14 +163,18 @@ political_decisions = {
 	integrate_swabia = { 
 	picture = MarzBerlin
 	potential = { 
-	   OR = { tag = SGF tag = GCF }
+	   OR = { tag = SGF tag = GCF tag = GER }
 	   NOT = { accepted_culture = swabian }
-	   any_owned_province = { is_core = SWA }
+	   any_owned_province = { is_core = BAD }
 	   NOT = { has_country_flag = swabian_acc }
 	}
 	
 	allow = { 
-	   NOT = { citizenship_policy = residency }
+	  OR = {
+	     NOT = { citizenship_policy = residency }
+		 ruling_party_ideology = fascist 
+		 tag = GER
+	  }
 	}
 	
 	effect = { 
@@ -170,14 +186,18 @@ political_decisions = {
 	integrate_south = { 
 	picture = MarzBerlin
 	potential = { 
-	OR = { tag = NGF tag = RHI }
+	OR = { tag = NGF tag = RHI tag = GER }
 	NOT = { accepted_culture = south_german }
 	OR = { any_owned_province = { is_core = BAV } any_owned_province = { is_core = AUS } }
 	NOT = { has_country_flag = south_acc }
 	}
 	
 	allow = { 
-	NOT = { citizenship_policy = residency }
+	  OR = {
+	     NOT = { citizenship_policy = residency }
+		 ruling_party_ideology = fascist 
+		 tag = GER
+	  }
 	}
 	
 	effect = { 

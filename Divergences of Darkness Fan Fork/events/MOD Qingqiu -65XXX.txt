@@ -142,7 +142,7 @@ country_event = {
 	option = { 
 		relation = { who = JAP value = -50 }
 		relation = { who = KKN value = -50 }
-		name = "DNG6.T"
+		name = "DNG6.A"
 		78 = { 
 			any_pop = { 
 				limit = { 
@@ -1596,7 +1596,9 @@ country_event = {
 	
 	option = { 
 		name = "DNG52.A"
+	    set_country_flag = californian_situation_resolved
 		clr_global_flag = californian_war_V_2
+		94 = { secede_province = THIS } 
 		inherit = DIN
 		inherit = UTE 
 		prestige = 25 
@@ -3426,12 +3428,12 @@ country_event = {
 			remove_core = DNG
 			secede_province = VNS 
 		}
-		any_owned = { 
-			limit = { 
-				region = DNG_39
-			}
-			secede_province = VNS
-		}
+		#any_owned = { 
+		#	limit = { 
+		#		region = DNG_39
+		#	}
+		#	secede_province = VNS
+		#}
 		any_owned = { 
 			limit = { province_id = 94 } 
 			secede_province = VNS
@@ -4497,6 +4499,7 @@ country_event = {
 			}
 			has_country_flag = ever_victorious_army
 		}   
+		NOT = { has_global_flag = MONKEY_END }
 	}
 	
 	mean_time_to_happen = { 
@@ -4509,6 +4512,7 @@ country_event = {
 	
 	option = { 
 		name = "DNG123.A" 
+		set_global_flag = MONKEY_END
 		any_pop = { 
 			militancy = -5 
 		}
@@ -4566,7 +4570,8 @@ country_event = {
 					}
 				}
 			}
-		}   
+		} 
+        NOT = { has_global_flag = MONKEY_END }		
 	}
 	
 	mean_time_to_happen = { 
@@ -4579,6 +4584,7 @@ country_event = {
 	
 	option = { 
 		name = "DNG124.A" 
+		set_global_flag = MONKEY_END
 		change_variable = {
 				which = Flood_DNG
 				value = 1
@@ -4622,6 +4628,7 @@ country_event = {
 			which = YENG_DNG_var
 			value = 13
 		}
+		NOT = { has_global_flag = MONKEY_END }
 	}
 	
 	mean_time_to_happen = { 
@@ -4634,6 +4641,7 @@ country_event = {
 	
 	option = { 
 		name = "DNG125.A" 
+		set_global_flag = MONKEY_END
 		clr_country_flag = YENG_DNG 
 		set_country_flag = democratic_YENG_DNG
 		
@@ -5417,12 +5425,13 @@ country_event = {
 		year = 1861 
 		has_country_flag = KOO_DNG 
 		has_country_flag = crisis_1860
-			NOT = { 
+		NOT = { 
 			check_variable = {
 				which = Koo_DNG_var
 				value = 8
 			}
-		}   
+		}
+        NOT = { has_global_flag = MONKEY_END }		
 	}
 	
 	mean_time_to_happen = { 
@@ -5435,6 +5444,7 @@ country_event = {
 	
 	option = { 
 		name = "DNG138.A" 
+		set_global_flag = MONKEY_END
 		change_variable = {
 				which = Flood_DNG
 				value = -1
@@ -5515,6 +5525,7 @@ country_event = {
 				}
 			}
 		} 
+		NOT = { has_global_flag = MONKEY_END }
 	}
 	
 	mean_time_to_happen = { 
@@ -5527,6 +5538,7 @@ country_event = {
 	
 	option = { 
 		name = "DNG139.A" 
+		set_global_flag = MONKEY_END
 		change_variable = {
 				which = Flood_DNG
 				value = 1
@@ -5567,6 +5579,7 @@ country_event = {
 			which = Koo_DNG_var
 			value = 13
 		}
+		NOT = { has_global_flag = MONKEY_END }
 	}
 	
 	mean_time_to_happen = { 
@@ -5579,6 +5592,7 @@ country_event = {
 	
 	option = { 
 		name = "DNG140.A" 
+		set_global_flag = MONKEY_END
 		change_variable = {
 				which = Flood_DNG
 				value = -1
@@ -6816,6 +6830,7 @@ country_event = {
 	
 	option = { 
 		name = "DNG159.A"
+		CLN = { set_country_flag = flood_failsafe }
 		any_country = {
 		   limit = {
 		     exists = yes
@@ -6885,7 +6900,7 @@ country_event = {
 	major = yes
 	
 	option = { 
-		name = "DNG159.A"
+		name = "DNG161.A"
 		any_owned = {
 			limit = { 
 				region = DNG_85
@@ -7007,14 +7022,14 @@ country_event = {
 country_event = { 
  
 	id = 65164
-	title = "DNG162.T" #Floods in Sanbao : weirdly enough the coast doesn't have a lot of rivers to flood and settlement are more spare so it's bad but not like the Valley 
-	desc = "DNG162.D" 
+	title = "DNG164.T" #Floods in Sanbao : weirdly enough the coast doesn't have a lot of rivers to flood and settlement are more spare so it's bad but not like the Valley 
+	desc = "DNG164.D" 
 	picture = "flood_DNG_2" 
 	
 	is_triggered_only = yes 
 	
 	option = { 
-		name = "DNG162.A"
+		name = "DNG164.A"
 		random_owned = {
 		   limit = {
 		      owner = {
@@ -8372,7 +8387,7 @@ country_event = {
 	}
 	
 	option = { 
-	name = "DNG193.A" #Let us be civil, they suffered enough
+	name = "DNG193.B" #Let us be civil, they suffered enough
 		set_country_flag = claimed_early 
 		badboy = -1
 		ai_chance = { 
@@ -8609,7 +8624,7 @@ country_event = {
 	}
 	
 	option = { 
-		name = "DNG193.A" #CLAIM CALIFORNIA AND RESTORE ORDER
+		name = "DNG1930.A" #CLAIM CALIFORNIA AND RESTORE ORDER
 		set_country_flag = oh_no_gringo_v2
 		set_country_flag = claimed_early 
 		set_country_flag = claimed_whole_california 
@@ -8725,7 +8740,7 @@ country_event = {
 	}
 	
 	option = { 
-	name = "DNG193.A" #Let us be civil, they suffered enough
+	name = "DNG1930.B" #Let us be civil, they suffered enough
 		set_country_flag = claimed_early 
 		badboy = -1
 		ai_chance = { 
@@ -8749,11 +8764,26 @@ country_event = {
 	trigger = { 
 		tag = SPA
 		has_country_flag = oh_no_gringo_v2
-		owns = 84
-		owns = 86
-		owns = 44
-		owns = 88
-		owns = 222
+		OR = {
+		   owns = 84
+		   VNS = { owns = 84 }
+		}
+		OR = {
+		   owns = 86
+		   VNS = { owns = 86 }
+		}
+		OR = {
+		   owns = 44
+		   VNS = { owns = 44 }
+		}
+		OR = {
+		   owns = 88
+		   VNS = { owns = 88 }
+		}
+		OR = { 
+		   owns = 222 
+		   VNS = { owns = 222 }
+		}
         is_ideology_enabled = socialist	
 	}
 
@@ -8878,6 +8908,9 @@ country_event = {
 		    political_reform = federalism
 		} 
 		any_owned = { limit = { is_core = VNS } secede_province = VNS }
+		any_owned = { limit = { is_core = DAA } secede_province = VNS }
+		any_owned = { limit = { is_core = BUE } secede_province = VNS }
+		any_owned = { limit = { is_core = DNG } secede_province = VNS }
 		VNS = {
 	    any_pop = { 
 		   limit = { 

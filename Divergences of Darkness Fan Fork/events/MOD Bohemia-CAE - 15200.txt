@@ -4724,6 +4724,7 @@ country_event = {
 		    }
 	        secede_province = SIL
         }
+		GER = { all_core = { remove_core = BOH } }
 		SCA = { 
 		   relation = { who = BRN value = 400 } 
 		   diplomatic_influence = { who = BRN value = 400 }  
@@ -5868,7 +5869,11 @@ country_event = {
 			remove_core = SCA
             secede_province = NGF
         }
-        BOH = { set_country_flag = BOH_treaty_failsafe remove_country_modifier = great_northern_war }		
+        BOH = {
+		   end_war = NGF
+		   end_war = SAX
+		   set_country_flag = BOH_treaty_failsafe remove_country_modifier = great_northern_war 
+		}		
 	}
 }
 
@@ -6035,6 +6040,8 @@ country_event = {
 		   annex_to = BRN
 		}
 		SCA = { 
+		   end_war = NGF
+		   end_war = SAX
 		   remove_country_modifier = great_northern_war
 		   relation = { who = BRN value = 400 } 
 		   diplomatic_influence = { who = BRN value = 400 }  
@@ -6663,7 +6670,7 @@ country_event = {
 			    casus_belli = conquest_any
 		    }
 		    defender_goal = {
-			    casus_belli = cut_down_to_size
+			    casus_belli = humiliate
 		    }
         }
 	}
@@ -6777,7 +6784,7 @@ country_event = {
 			    casus_belli = conquest_any
 		    }
 		    defender_goal = {
-			    casus_belli = cut_down_to_size
+			    casus_belli = humiliate
 		    }
         }
 	}
@@ -7280,7 +7287,7 @@ country_event = {
 			    casus_belli = make_puppet
 		    }
 		    defender_goal = {
-			    casus_belli = cut_down_to_size
+			    casus_belli = humiliate
 		    }
         }
 	}
@@ -8273,6 +8280,7 @@ country_event = {
 		    }
 	        secede_province = SIL
         }
+		GER = { all_core = { remove_core = BOH } }
 		any_pop = { limit = { strata = rich culture = czech } reduce_pop = 0.6 }
 		any_pop = { limit = { strata = middle culture = czech } reduce_pop = 0.8 }
 		any_pop = { limit = { strata = poor culture = czech } reduce_pop = 0.99 }
@@ -9241,7 +9249,8 @@ country_event = {
 		relation = { who = ELX value = -400 } 
 		diplomatic_influence = { who = ELX value = -400 }  
 		relation = { who = MSZ value = -400 } 
-		diplomatic_influence = { who = MSZ value = -400 } 	
+		diplomatic_influence = { who = MSZ value = -400 } 
+        GER = { all_core = { remove_core = BOH } }		
 		SCA = { 
 		   relation = { who = BRN value = 400 } 
 		   diplomatic_influence = { who = BRN value = 400 }  
